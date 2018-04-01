@@ -12,7 +12,8 @@ get '/' do
 end
 
 post '/checkout' do
-  session["item"]="params[:item]"
+  item=params[:item]
+  session["item"]=params[:item]
   session
   #erb :show
 end
